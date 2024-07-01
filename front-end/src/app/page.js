@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Home() {
 
@@ -7,8 +9,8 @@ export default function Home() {
       <div className="z-10 fixed top-0 flex w-full items-center justify-between pb-6 pt-8">
         <div className="flex items-center space-x-6 flex-grow">
           <div className="flex-grow"></div>
-          <div className="font-normal text-sm font-mono">Following</div>
-          <div className="font-bold text-sm font-mono">For You</div>
+          <div className="font-normal text-sm font-mono text-center">Following</div>
+          <div className="font-bold text-sm font-mono text-center">For You</div>
           <div className="flex-grow"></div>
         </div>
         <div className="pr-2 font-normal text-sm font-mono">Search</div>
@@ -25,7 +27,9 @@ export default function Home() {
             <div className="bg-white rounded-lg p-2 mb-2">Icon 2</div>
             <div className="bg-white rounded-lg p-2 mb-2">Icon 3</div>
             <div className="bg-white rounded-lg p-2 mb-2">Icon 4</div>
-            <div className="bg-white rounded-lg p-2 rounded-full">Icon 5</div>
+            <div className="bg-white rounded-lg p-2 mb-2">Icon 5</div>
+            <button className="bg-white rounded-lg p-2 mb-2">Shop Icon</button>
+            <div className="bg-white rounded-lg p-2 rounded-full">Icon 6</div>
           </div>
         </div>
       </div>
