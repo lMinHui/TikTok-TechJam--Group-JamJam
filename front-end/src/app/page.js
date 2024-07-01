@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import SimilarProdCard from "@/components/similarProdCard";
 
 export default function Home() {
 
