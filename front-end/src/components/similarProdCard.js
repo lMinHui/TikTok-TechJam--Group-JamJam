@@ -2,7 +2,7 @@ import React from 'react';
 
 const SimilarProdCard = () => {
     return (
-        <div className='bg-[#FBFBFB] rounded-lg w-[45vw] h-[10vh] p-1'>
+        <div className='bg-[#FBFBFB] rounded-lg w-[48vw] h-[10vh] p-1'>
             <div className='w-full h-[7vh] overflow-hidden'>
                 <div className='flex w-full h-full overflow-hidden gap-1'>
                     <div className='rounded-tl-lg h-full w-[29vw] overflow-hidden'>
@@ -25,7 +25,7 @@ const SimilarProdCard = () => {
                 </div>
             </div>
             <div className='min-w-full flex justify-between px-1 pt-0.5'>
-                <p className='max-w-[35vw] text-[8px] text-black truncate'>Electric Guitar</p>
+                <p className='max-w-[35vw] text-[8px] text-black truncate drop-shadow-sm'>Electric Guitar</p>
                 <img src="/Arrow.svg" alt="Arrow" className="self-center object-scale-down py-px inline-block" />
             </div>
         </div>
