@@ -2,7 +2,7 @@ import React from 'react';
 
 const SimilarProdCard = () => {
     return (
-        <div className='z-10 bg-[#FBFBFB] rounded-lg w-[45vw] h-[10vh] p-1'>
+        <div className='bg-[#FBFBFB] rounded-lg w-[45vw] h-[10vh] p-1'>
             <div className='w-full h-[7vh] overflow-hidden'>
                 <div className='flex w-full h-full overflow-hidden gap-1'>
                     <div className='rounded-tl-lg h-full w-[29vw] overflow-hidden'>
