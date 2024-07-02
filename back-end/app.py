@@ -14,7 +14,7 @@ def get_data():
     return jsonify(data)
 
 def check_dbConnection():
-    uri = "mongodb+srv://MinJam:JSr4XY0fJgfkcMY6@cluster0.4gdeup7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    uri = "mongodb+srv://MinJam:<password>@cluster0.4gdeup7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     client = MongoClient(uri, server_api=ServerApi('1'))
     try:
         client.admin.command('ping')
