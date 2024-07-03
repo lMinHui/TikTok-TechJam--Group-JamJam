@@ -1,7 +1,27 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from 'next/font/local';
 
 const inter = Inter({ subsets: ["latin"] });
+const prox = localFont({
+  src: [
+    {
+      path: '../../public/fonts/ProximaNova-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/ProximaNova-Semibold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/ProximaNova-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +36,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={prox.className}>{children}</body>
     </html>
   );
 }
