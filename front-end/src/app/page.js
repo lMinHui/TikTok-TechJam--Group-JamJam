@@ -123,7 +123,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center justify-center  pt-1">
           <img src="/Shop_small.svg" alt="Shop" className="self-center object-scale-down" />
-          <div className="font-semibold text-[10px] text-white">Friends</div>
+          <div className="font-semibold text-[10px] text-white">Shop</div>
         </div>
         <div className="flex items-center justify-center ">
           <img src="/Button Shape.svg" alt="Add Button" className="self-center object-scale-down py-px" />
