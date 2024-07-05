@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from 'next/link'
 import { useState, useEffect, useRef } from "react";
 import SimilarProdCard from "@/components/similarProdCard";
 import FeaturedProdCard from "@/components/featuredProdCard";
@@ -30,6 +31,7 @@ export default function Home() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isVisible]);
+
 
   const videoData = [
     { "id": 1, "creator": "lora8grace", "description": "#Only S$4.20 Original price $12.57 Discount 60% Garnier 30ml Vitamin C Booster Serum Bright Complete Nicotinamide Brighting Skin Tone Essence Fade Acne Mark Beauty Products!", "sound": "nhạc nền - BẠCH TUYẾT-FASHION", "src": "1_ssstik.io_@lora8grace_1719797298702.mp4" },
@@ -122,7 +124,7 @@ export default function Home() {
           <div className="z-30 absolute top-0 right-0 w-[50vw] mx-4 my-6">
             <p className="text-[14px] text-[#FBFBFB] font-semibold mb-2 drop-shadow-2xl">Featured in this video</p>
             <div className="flex flex-col gap-y-2 mb-4">
-              <FeaturedProdCard></FeaturedProdCard>
+              <FeaturedProdCard itemId={1}></FeaturedProdCard>
               <LiveProdCard></LiveProdCard>
               <FeaturedProdCard></FeaturedProdCard>
             </div>
@@ -143,10 +145,12 @@ export default function Home() {
           <img src="/Home Solid Icon.svg" alt="Home" className="self-center object-scale-down py-px" />
           <div className="font-semibold text-[10px] text-white">Home</div>
         </div>
-        <div className="flex flex-col items-center justify-center  pt-1">
-          <img src="/Shop_small.svg" alt="Shop" className="self-center object-scale-down" />
-          <div className="font-semibold text-[10px] text-white">Shop</div>
-        </div>
+        <Link href="/shop">
+          <div className="flex flex-col items-center justify-center  pt-1">
+              <img src="/Shop_small.svg" alt="Shop" className="self-center object-scale-down" />
+              <div className="font-semibold text-[10px] text-white">Shop</div>
+          </div>
+        </Link>
         <div className="flex items-center justify-center ">
           <img src="/Button Shape.svg" alt="Add Button" className="self-center object-scale-down py-px" />
         </div>

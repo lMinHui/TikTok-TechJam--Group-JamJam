@@ -4,6 +4,7 @@ const FeaturedProdCard = () => {
     return (
         <div className='bg-[#FBFBFB] shadow rounded-lg w-[48vw] h-[21vh] p-1'>
             <div className='flex w-full h-full overflow-hidden gap-1'>
+                
                 <div className='flex flex-col h-full w-1/2 justify-between'>
                     <div className='rounded-tl-lg min-h-3/5 w-full overflow-hidden'>
                         <img src="/RandomProd.png" alt="RandomProd" className="h-full w-full object-center object-cover" />
@@ -26,6 +27,7 @@ const FeaturedProdCard = () => {
                             </span>
                         </div>
                 </div>
+
                 <div className='relative rounded-r-lg h-full w-1/2 overflow-hidden'>
                     <img src="/RandomProd.png" alt="RandomProd" className="h-full w-full object-center object-cover" />
                     <div className="absolute flex top-0 left-0 items-start justify-start p-1">
