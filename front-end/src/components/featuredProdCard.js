@@ -4,7 +4,7 @@ import Link from 'next/link';
 const FeaturedProdCard = ({itemId}) => {
     return (
         <Link href={`/shop/${itemId}`}>
-        <div className='bg-[#FBFBFB] shadow rounded-lg w-[48vw] h-[20vh] p-1'>
+        <div className='bg-[#FBFBFB] shadow rounded-lg w-auto h-[20vh] p-1'>
             <div className='flex flex-col  w-full h-full'>
                 <div className='flex w-full min-h-3/5 overflow-hidden'>
                     <div className='relative rounded-t-lg h-full w-full overflow-hidden'>

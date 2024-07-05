@@ -1,8 +1,28 @@
 import React from 'react';
+import Link from 'next/link';
 
-const SimilarProdCard = () => {
+const SimilarProdCard = ({prodCategory}) => {
+    
+    const formatString = (str) => {
+        if (str.includes('_')) {
+            // Split by underscores and capitalize each word
+            const words = str.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1));
+            return words.join(' ');
+        } else {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+    };
+    const formattedProdCategory = formatString(prodCategory);
+
     return (
-        <div className='bg-[#FBFBFB] shadow rounded-lg w-[48vw] h-[10vh] p-1'>
+        <div className='bg-[#FBFBFB] shadow rounded-lg w-auto h-[10vh] p-1'>
+            <Link
+                href={ formattedProdCategory ? 
+                {
+                    pathname: '/shop',
+                    query: { search: `${encodeURIComponent(prodCategory)}` },
+                } : "/shop"}
+            >
             <div className='flex flex-col w-full h-full justify-between'>
                 <div className='w-full min-h-2/3 overflow-hidden'>
                     <div className='flex w-full h-full overflow-hidden gap-1'>
@@ -30,6 +50,7 @@ const SimilarProdCard = () => {
                     <img src="/Arrow.svg" alt="Arrow" className="self-center object-scale-down py-px inline-block" />
                 </div>
             </div>
+            </Link>
         </div>
     );
 };

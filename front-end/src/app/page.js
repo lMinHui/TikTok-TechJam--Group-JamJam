@@ -125,16 +125,16 @@ export default function Home() {
             <p className="text-[14px] text-[#FBFBFB] font-semibold mb-2 drop-shadow-2xl">Featured in this video</p>
             <div className="flex flex-col gap-y-2 mb-4">
               <FeaturedProdCard itemId={1}></FeaturedProdCard>
-              <LiveProdCard></LiveProdCard>
+              <LiveProdCard itemId={1}></LiveProdCard>
               <FeaturedProdCard></FeaturedProdCard>
             </div>
             <p className="text-[14px] text-[#FBFBFB] font-semibold mb-2 drop-shadow-2xl">Similar Products</p>
             <div className="flex flex-col gap-y-2 mb-6">
-              <SimilarProdCard></SimilarProdCard>
-              <SimilarProdCard></SimilarProdCard>
-              <SimilarProdCard></SimilarProdCard>
-              <SimilarProdCard></SimilarProdCard>
-              <SimilarProdCard></SimilarProdCard>
+              <SimilarProdCard prodCategory={'electric_guitar'}></SimilarProdCard>
+              <SimilarProdCard prodCategory={'electric_guitar'}></SimilarProdCard>
+              <SimilarProdCard prodCategory={'electric_guitar'}></SimilarProdCard>
+              <SimilarProdCard prodCategory={'electric_guitar'}></SimilarProdCard>
+              <SimilarProdCard prodCategory={'electric_guitar'}></SimilarProdCard>
             </div>
           </div>
         </div>
