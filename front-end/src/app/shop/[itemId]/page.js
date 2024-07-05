@@ -37,7 +37,7 @@ export default function Item() {
                 </div>
             </div>
             <div className="relative w-auto h-[90vh]">
-                <Image src={`/itemPages/${itemId}.png`} alt={`Item ${itemId}`} fill={true} className="object-center object-cover"></Image>
+                <Image src={`/itemPages/${itemId}.png`} alt={`Item ${itemId}`} fill={true} className="object-center object-scale-down"></Image>
             </div>
         </div>
     );
