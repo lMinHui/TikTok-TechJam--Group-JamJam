@@ -142,13 +142,13 @@ export default function Home() {
           {/* Second Product */}
           <div className="flex flex-col w-3/5">
             {/* Top Product */}
-            <div className="bg-gray-200 mb-4 h-4/7"></div>
-            <div className="bg-gray-200 mb-4 h-4/7"></div>
-            <div className="bg-gray-200 mb-4 h-4/7"></div>
+            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
+            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
+            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
 
             {/* Bottom Product */}
-            <div className="bg-gray-200 h-3/7"></div>
-            <div className="bg-gray-200 h-3/7"></div>
+            <div className="bg-gray-200 min-h-3/7"></div>
+            <div className="bg-gray-200 min-h-3/7"></div>
           </div>
         </div>
 
