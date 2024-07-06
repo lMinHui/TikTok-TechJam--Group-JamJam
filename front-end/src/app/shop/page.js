@@ -163,7 +163,7 @@ export default function Home() {
         {/* Sorting Options */}
         <div
           className="p-1 rounded"
-          style={{ marginTop: "-1vh", marginBottom: "1vh" }}
+          style={{ marginTop: "-1.3vh", marginBottom: "1vh" }}
         >
           <div className="inline-block h-7 w-27 mr-1.5">
             <select className="px-1.5 py-0.75 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
