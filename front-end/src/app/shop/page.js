@@ -129,23 +129,26 @@ export default function Home() {
       {/* Main Content */}
       <main className="p-4">
         {/*.Similar Products */}
-        <p className="text-lg mb-4 text-gray-900">
-          <span className="font-normal">Similar Products:</span> {prodCategory}
+        <p className=" mb-4 text-gray-900">
+          <span className="font-normal">Similar products:</span> <span className="font-bold" {prodCategory}/>
         </p>
 
         {/* Product Placeholders */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
+        <div
+          className="grid grid-cols-2 gap-4 mb-8"
+          style={{ marginTop: "-1vh" }}
+        >
           <div className="bg-gray-200 h-40"></div>
           <div className="bg-gray-200 h-40"></div>
         </div>
 
         {/* Sort Title*/}
-        <p className="text-lg mb-4 text-gray-900">
-          <span className="font-normal">Sort:</span>
+        <p className="mb-4 text-gray-900">
+          <span className="font-bold">Sort by:</span>
         </p>
 
         {/* Sorting Options */}
-        <div className="flex justify-between mb-8">
+        <div className="flex justify-between mb-8" style={{ marginTop: "-1vh" }}>
           <div className="flex items-center">
             <select className="ml-2 p-2 border rounded">
               <option className="text-sm text-gray-900">Rating</option>
@@ -164,7 +167,7 @@ export default function Home() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4" style={{ marginTop: "-1vh" }}>
           {[1, 2, 3, 4, 5, 6].map((itemId) => (
             <FeaturedProdCard key={itemId} itemId={itemId} />
           ))}
