@@ -115,7 +115,9 @@ export default function Home() {
             key={navItem}
             href="#"
             className={`py-2 px-4 text-center w-full hover:bg-gray-200 ${
-              activeTab === navItem ? "border-b-4 border-black font-bold" : ""
+              activeTab === navItem
+                ? "border-b-4 border-black font-bold text-black"
+                : "text-gray-900"
             }`}
             onClick={() => setActiveTab(navItem)}
           >
@@ -126,9 +128,42 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="p-4">
-        <h2 className="text-2xl font-bold mb-4">
+        {/*.Similar Products */}
+        <p className="text-2xl font-bold mb-4 text-gray-900">
           <span className="font-normal">Similar Products:</span> {prodCategory}
-        </h2>
+        </p>
+
+        {/* Sort Title*/}
+        <p className="text-2xl font-bold mb-4 text-gray-900">
+          <span className="font-normal">Sort:</span>
+        </p>
+
+        {/* Product Placeholders */}
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="bg-gray-200 h-40"></div>
+          <div className="bg-gray-200 h-40"></div>
+        </div>
+
+        <div className="flex justify-between mb-8">
+          <div className="flex items-center">
+            <span className="material-icons">star</span>
+            <select className="ml-2 p-2 border rounded">
+              <option>Rating</option>
+            </select>
+          </div>
+          <div className="flex items-center">
+            <span className="material-icons">shopping_cart</span>
+            <select className="ml-2 p-2 border rounded">
+              <option>Sold</option>
+            </select>
+          </div>
+          <div className="flex items-center">
+            <span className="material-icons">schedule</span>
+            <select className="ml-2 p-2 border rounded">
+              <option>Delivery</option>
+            </select>
+          </div>
+        </div>
 
         {/* Product Grid */}
         <div className="grid grid-cols-2 gap-4">
