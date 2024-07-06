@@ -140,14 +140,14 @@ export default function Home() {
           <div className="bg-gray-200 w-2/5 mr-4 h-full"></div>
 
           {/* Second Product */}
-          <div className="flex flex-col w-3/5 h-full gap-y-4">
-            <div className="flex w-full h-1/2 gap-x-4">
+          <div className="flex flex-col w-3/5 h-full gap-y-2">
+            <div className="flex w-full h-1/2 gap-x-2">
               {/* Top Product */}
               <div className="bg-gray-200 w-full h-full"></div>
               <div className="bg-gray-200 w-full h-full"></div>
               <div className="bg-gray-200 w-full h-full"></div>
             </div>
-            <div className="flex w-full h-1/2 gap-x-4">
+            <div className="flex w-full h-1/2 gap-x-2">
               {/* Bottom Product */}
               <div className="bg-gray-200 w-full h-full"></div>
               <div className="bg-gray-200 w-full h-full"></div>
@@ -162,19 +162,30 @@ export default function Home() {
 
         {/* Sorting Options */}
         <div className="bg-gray-200 p-1 rounded" style={{ marginTop: "-1vh" }}>
-          <div className="inline-block h-9.2 mr-1">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
-              <option>Rating</option>
+          <div className="inline-block h-9.2 w-32 mr-1">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+              <option value="">Rating</option>
+              <option value="1">⭐️</option>
+              <option value="2">⭐️⭐️</option>
+              <option value="3">⭐️⭐️⭐️</option>
+              <option value="4">⭐️⭐️⭐️⭐️</option>
+              <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
             </select>
           </div>
-          <div className="inline-block h-9.2 mr-1">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
-              <option>Sold</option>
+          <div className="inline-block h-9.2 w-32 mr-1">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+              <option value="">Sold</option>
+              <option value="10">Sold 10</option>
+              <option value="20">Sold 20</option>
+              <option value="30">Sold 30</option>
             </select>
           </div>
-          <div className="inline-block h-9.2">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
-              <option>Delivery</option>
+          <div className="inline-block h-9.2 w-32">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+              <option value="">Delivery</option>
+              <option value="1-day">1 day</option>
+              <option value="less-week"> less than 1 week</option>
+              <option value="more-week">more than 1 week</option>
             </select>
           </div>
         </div>
