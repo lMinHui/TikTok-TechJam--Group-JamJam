@@ -16,6 +16,8 @@ export default function Home() {
   const searchParams = useSearchParams();
   const query = searchParams.get("search");
 
+  const [prodCategory, setProdCategory] = useState('');
+  
   // Set active bar for tab in the navigation
   const [activeTab, setActiveTab] = useState("Shop");
 
@@ -35,6 +37,7 @@ export default function Home() {
       };
       const formattedQuery = formatString(query);
       document.getElementById("searchInput").value = formattedQuery;
+      setProdCategory(formattedQuery);
     }
   }, [query]);
 
@@ -121,7 +124,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="p-4">
         <h2 className="text-2xl font-bold mb-4">
-          Similar Products: Electric Guitar
+          Similar Products: {prodCategory}
         </h2>
 
         {/* Product Grid */}
