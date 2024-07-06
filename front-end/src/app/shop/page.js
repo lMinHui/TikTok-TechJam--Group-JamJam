@@ -129,13 +129,8 @@ export default function Home() {
       {/* Main Content */}
       <main className="p-4">
         {/*.Similar Products */}
-        <p className="text-2xl font-bold mb-4 text-gray-900">
+        <p className="text-lg mb-4 text-gray-900">
           <span className="font-normal">Similar Products:</span> {prodCategory}
-        </p>
-
-        {/* Sort Title*/}
-        <p className="text-2xl font-bold mb-4 text-gray-900">
-          <span className="font-normal">Sort:</span>
         </p>
 
         {/* Product Placeholders */}
@@ -144,23 +139,26 @@ export default function Home() {
           <div className="bg-gray-200 h-40"></div>
         </div>
 
+        {/* Sort Title*/}
+        <p className="text-lg mb-4 text-gray-900">
+          <span className="font-normal">Sort:</span>
+        </p>
+
+        {/* Sorting Options */}
         <div className="flex justify-between mb-8">
           <div className="flex items-center">
-            <span className="material-icons">star</span>
             <select className="ml-2 p-2 border rounded">
-              <option>Rating</option>
+              <option className="text-sm text-gray-900">Rating</option>
             </select>
           </div>
           <div className="flex items-center">
-            <span className="material-icons">shopping_cart</span>
             <select className="ml-2 p-2 border rounded">
-              <option>Sold</option>
+              <option className="text-sm text-gray-900"> Sold</option>
             </select>
           </div>
           <div className="flex items-center">
-            <span className="material-icons">schedule</span>
             <select className="ml-2 p-2 border rounded">
-              <option>Delivery</option>
+              <option className="text-sm text-gray-900">Delivery</option>
             </select>
           </div>
         </div>
