@@ -135,23 +135,20 @@ export default function Home() {
         </p>
 
         {/* Product Placeholders */}
-        <div
-          className="grid grid-cols-2 gap-4 mb-8"
-          style={{ marginTop: "-1vh" }}
-        >
-          {/* Initial 3/7 width box */}
-          <div className="bg-gray-200 h-40 col-span-3/7"></div>
+        <div className="flex mb-8" style={{ marginTop: "-1vh" }}>
+          {/* First Product */}
+          <div className="bg-gray-200 w-2/5 mr-4 h-40"></div>
 
-          {/* Right section with 5 boxes */}
-          <div className="grid grid-cols-1 gap-4 col-span-4/7">
-            {/* Top 3 boxes */}
-            <div className="bg-gray-200 h-24"></div>
-            <div className="bg-gray-200 h-24"></div>
-            <div className="bg-gray-200 h-24"></div>
+          {/* Second Product */}
+          <div className="flex flex-col w-3/5">
+            {/* Top Product */}
+            <div className="bg-gray-200 mb-4 h-4/7"></div>
+            <div className="bg-gray-200 mb-4 h-4/7"></div>
+            <div className="bg-gray-200 mb-4 h-4/7"></div>
 
-            {/* Bottom 2 boxes */}
-            <div className="bg-gray-200 h-24"></div>
-            <div className="bg-gray-200 h-24"></div>
+            {/* Bottom Product */}
+            <div className="bg-gray-200 h-3/7"></div>
+            <div className="bg-gray-200 h-3/7"></div>
           </div>
         </div>
 
