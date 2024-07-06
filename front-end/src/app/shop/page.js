@@ -134,12 +134,21 @@ export default function Home() {
         </p>
 
         {/* Product Placeholders */}
-        <div
-          className="grid grid-cols-2 gap-4 mb-8"
-          style={{ marginTop: "-1vh" }}
-        >
-          <div className="bg-gray-200 h-40"></div>
-          <div className="bg-gray-200 h-40"></div>
+        <div className="grid grid-cols-2 gap-4 mb-8" style={{ marginTop: "-1vh" }}>
+          {/* Initial 3/7 width box */}
+          <div className="bg-gray-200 h-40 col-span-3/7"></div>
+
+          {/* Right section with 5 boxes */}
+          <div className="grid grid-cols-1 gap-4 col-span-4/7">
+            {/* Top 3 boxes */}
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+
+            {/* Bottom 2 boxes */}
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+          </div>
         </div>
 
         {/* Sort Title*/}
@@ -148,20 +157,20 @@ export default function Home() {
         </p>
 
         {/* Sorting Options */}
-        <div className="flex justify-between mb-8" style={{ marginTop: "-1vh" }}>
+        <div className="flex items-center space-x-5 bg-gray-200 p-2 rounded" style={{ marginTop: "-1vh" }}>
           <div className="flex items-center">
-            <select className="ml-2 p-2 border rounded">
-              <option className="text-sm text-gray-900">Rating</option>
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
+              <option>Rating</option>
             </select>
           </div>
           <div className="flex items-center">
-            <select className="ml-2 p-2 border rounded">
-              <option className="text-sm text-gray-900"> Sold</option>
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
+              <option>Sold</option>
             </select>
           </div>
           <div className="flex items-center">
-            <select className="ml-2 p-2 border rounded">
-              <option className="text-sm text-gray-900">Delivery</option>
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
+              <option>Delivery</option>
             </select>
           </div>
         </div>
