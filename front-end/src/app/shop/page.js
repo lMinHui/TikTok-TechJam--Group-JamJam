@@ -10,7 +10,7 @@ export default function Home() {
     if (router?.back) {
       router.back();
     } else {
-      router.push("/shop");
+      router.push("/");
     }
   };
   const searchParams = useSearchParams();
