@@ -128,13 +128,17 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="p-4">
-        {/*.Similar Products */}
-        <p className=" mb-4 text-gray-900">
-          <span className="font-normal">Similar products:</span> <span className="font-bold" {prodCategory}/>
+        {/*Similar Products */}
+        <p className="mb-4 text-gray-900">
+          <span className="font-normal">Similar products:</span>{" "}
+          <span className="font-bold">{prodCategory}</span>
         </p>
 
         {/* Product Placeholders */}
-        <div className="grid grid-cols-2 gap-4 mb-8" style={{ marginTop: "-1vh" }}>
+        <div
+          className="grid grid-cols-2 gap-4 mb-8"
+          style={{ marginTop: "-1vh" }}
+        >
           {/* Initial 3/7 width box */}
           <div className="bg-gray-200 h-40 col-span-3/7"></div>
 
@@ -157,7 +161,10 @@ export default function Home() {
         </p>
 
         {/* Sorting Options */}
-        <div className="flex items-center space-x-5 bg-gray-200 p-2 rounded" style={{ marginTop: "-1vh" }}>
+        <div
+          className="flex items-center space-x-5 bg-gray-200 p-2 rounded"
+          style={{ marginTop: "-1vh" }}
+        >
           <div className="flex items-center">
             <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Rating</option>
