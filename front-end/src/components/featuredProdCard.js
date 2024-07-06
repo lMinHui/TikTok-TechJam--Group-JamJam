@@ -1,14 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
 
-const FeaturedProdCard = ({itemId}) => {
+const FeaturedProdCard = ({itemId, product_name, price, src}) => {
     return (
         <Link href={`/shop/${itemId}`}>
         <div className='bg-[#FBFBFB] shadow rounded-lg w-auto h-[20vh] p-1'>
             <div className='flex flex-col  w-full h-full'>
                 <div className='flex w-full min-h-3/5 overflow-hidden'>
                     <div className='relative rounded-t-lg h-full w-full overflow-hidden'>
-                        <img src="/RandomProd.png" alt="RandomProd" className="h-full w-full object-center object-cover" />
+                        <img src={src} alt={product_name} className="h-full w-full object-center object-cover" />
                         <div className="absolute flex top-0 left-0 items-start justify-start p-1.5">
                             <img src="/TikTok Mall Icon.svg" alt="TikTok Mall Icon" className="self-center object-scale-down inline-block" />             
                         </div>
@@ -18,11 +18,11 @@ const FeaturedProdCard = ({itemId}) => {
                     </div>
                 </div>
                 <div className='min-w-full h-auto flex flex-col justify-between px-1 pt-1 '>
-                    <p className='text-[13px] text-black font-normal drop-shadow-sm leading-tight line-clamp-2 text-ellipsis overflow-hidden'>[SG STOCK] Urban Beaded Bracelet Set 3PC more more more</p>
+                    <p className='text-[13px] text-black font-normal drop-shadow-sm leading-tight line-clamp-2 text-ellipsis overflow-hidden'>{product_name}</p>
                     <div className='flex justify-between'>
                         <span className='flex items-end leading-snug'>
                             <p className='text-[#FF3864] text-[12px] font-normal mr-px'>S$</p>
-                            <p className='text-[#FF3864] text-[19px] leading-none font-bold'>25.33</p>
+                            <p className='text-[#FF3864] text-[19px] leading-none font-bold'>{price}</p>
                         </span>
                         <div className='flex flex-col '>
                             <span className='flex items-baseline leading-snug'>
