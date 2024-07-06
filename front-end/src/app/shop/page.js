@@ -161,9 +161,12 @@ export default function Home() {
         </p>
 
         {/* Sorting Options */}
-        <div className="p-1 rounded" style={{ marginTop: "-1vh" }}>
-          <div className="inline-block h-7 w-11 mr-1.5">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+        <div
+          className="p-1 rounded"
+          style={{ marginTop: "-1vh", marginBottom: "1vh" }}
+        >
+          <div className="inline-block h-7 w-27 mr-1.5">
+            <select className="px-1.5 py-0.75 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
               <option value="">Rating</option>
               <option value="1">⭐️</option>
               <option value="2">⭐️⭐️</option>
@@ -172,16 +175,16 @@ export default function Home() {
               <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
             </select>
           </div>
-          <div className="inline-block h-7 w-11 mr-1.5">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+          <div className="inline-block h-7 w-27 mr-1.5">
+            <select className="px-1.5 py-0.75 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
               <option value="">Sold</option>
               <option value="10">Sold 10</option>
               <option value="20">Sold 20</option>
               <option value="30">Sold 30</option>
             </select>
           </div>
-          <div className="inline-block h-7 w-11">
-            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
+          <div className="inline-block h-7 w-27">
+            <select className="px-1.5 py-0.75 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
               <option value="">Delivery</option>
               <option value="1-day">1 day</option>
               <option value="less-week"> less than 1 week</option>
