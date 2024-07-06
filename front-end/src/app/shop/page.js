@@ -128,45 +128,62 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="p-4">
-        {/*.Similar Products */}
-        <p className="text-2xl font-bold mb-4 text-gray-900">
-          <span className="font-normal">Similar Products:</span> {prodCategory}
-        </p>
-
-        {/* Sort Title*/}
-        <p className="text-2xl font-bold mb-4 text-gray-900">
-          <span className="font-normal">Sort:</span>
+        {/*Similar Products */}
+        <p className="mb-4 text-gray-900">
+          <span className="font-normal">Similar products:</span>{" "}
+          <span className="font-bold">{prodCategory}</span>
         </p>
 
         {/* Product Placeholders */}
-        <div className="grid grid-cols-2 gap-4 mb-8">
-          <div className="bg-gray-200 h-40"></div>
-          <div className="bg-gray-200 h-40"></div>
+        <div
+          className="grid grid-cols-2 gap-4 mb-8"
+          style={{ marginTop: "-1vh" }}
+        >
+          {/* Initial 3/7 width box */}
+          <div className="bg-gray-200 h-40 col-span-3/7"></div>
+
+          {/* Right section with 5 boxes */}
+          <div className="grid grid-cols-1 gap-4 col-span-4/7">
+            {/* Top 3 boxes */}
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+
+            {/* Bottom 2 boxes */}
+            <div className="bg-gray-200 h-24"></div>
+            <div className="bg-gray-200 h-24"></div>
+          </div>
         </div>
 
-        <div className="flex justify-between mb-8">
+        {/* Sort Title*/}
+        <p className="mb-4 text-gray-900">
+          <span className="font-bold">Sort by:</span>
+        </p>
+
+        {/* Sorting Options */}
+        <div
+          className="flex items-center space-x-5 bg-gray-200 p-2 rounded"
+          style={{ marginTop: "-1vh" }}
+        >
           <div className="flex items-center">
-            <span className="material-icons">star</span>
-            <select className="ml-2 p-2 border rounded">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Rating</option>
             </select>
           </div>
           <div className="flex items-center">
-            <span className="material-icons">shopping_cart</span>
-            <select className="ml-2 p-2 border rounded">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Sold</option>
             </select>
           </div>
           <div className="flex items-center">
-            <span className="material-icons">schedule</span>
-            <select className="ml-2 p-2 border rounded">
+            <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Delivery</option>
             </select>
           </div>
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-4" style={{ marginTop: "-1vh" }}>
           {[1, 2, 3, 4, 5, 6].map((itemId) => (
             <FeaturedProdCard key={itemId} itemId={itemId} />
           ))}
