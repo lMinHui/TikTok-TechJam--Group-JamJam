@@ -152,7 +152,6 @@ export default function Home() {
               <div className="bg-gray-200 w-full h-full"></div>
               <div className="bg-gray-200 w-full h-full"></div>
             </div>
-
           </div>
         </div>
 
@@ -162,21 +161,18 @@ export default function Home() {
         </p>
 
         {/* Sorting Options */}
-        <div
-          className="flex items-center space-x-5 bg-gray-200 p-2 rounded"
-          style={{ marginTop: "-1vh" }}
-        >
-          <div className="flex items-center">
+        <div className="bg-gray-200 p-1 rounded" style={{ marginTop: "-1vh" }}>
+          <div className="inline-block h-9.2 mr-1">
             <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Rating</option>
             </select>
           </div>
-          <div className="flex items-center">
+          <div className="inline-block h-9.2 mr-1">
             <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Sold</option>
             </select>
           </div>
-          <div className="flex items-center">
+          <div className="inline-block h-9.2">
             <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200">
               <option>Delivery</option>
             </select>
