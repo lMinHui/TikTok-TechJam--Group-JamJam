@@ -16,8 +16,8 @@ export default function Home() {
   const searchParams = useSearchParams();
   const query = searchParams.get("search");
 
-  const [prodCategory, setProdCategory] = useState('');
-  
+  const [prodCategory, setProdCategory] = useState("");
+
   // Set active bar for tab in the navigation
   const [activeTab, setActiveTab] = useState("Shop");
 
@@ -106,7 +106,10 @@ export default function Home() {
       {/* header section ends here*/}
 
       {/* Navigation Bar */}
-      <nav className="flex justify-between border-b">
+      <nav
+        className="flex justify-between border-b"
+        style={{ marginTop: "-2vh" }}
+      >
         {["Shop", "Videos", "Live", "Users", "Places"].map((navItem) => (
           <a
             key={navItem}
@@ -124,32 +127,13 @@ export default function Home() {
       {/* Main Content */}
       <main className="p-4">
         <h2 className="text-2xl font-bold mb-4">
-          Similar Products: {prodCategory}
+          <span className="font-normal">Similar Products:</span> {prodCategory}
         </h2>
 
         {/* Product Grid */}
         <div className="grid grid-cols-2 gap-4">
-          {Array.from({ length: 6 }).map((_, index) => (
-            <div
-              key={index}
-              className="bg-gray-200 rounded-md overflow-hidden flex"
-            >
-              {/* 2/3 Placeholder */}
-              <div className="w-2/3 bg-gray-400"></div>
-
-              {/* 1/3 Product Description and Price */}
-              <div className="w-1/3 bg-white p-4 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-lg font-bold mb-2">Product Name</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-                <div className="text-pink-500 font-bold text-lg">$99.99</div>
-              </div>
-            </div>
+          {[1, 2, 3, 4, 5, 6].map((itemId) => (
+            <FeaturedProdCard key={itemId} itemId={itemId} />
           ))}
         </div>
       </main>
