@@ -156,12 +156,12 @@ export default function Home() {
         </div>
 
         {/* Sort Title*/}
-        <p className="mb-4 text-gray-900">
+        <p className="mb-4 text-gray-900" tyle={{ marginTop: "-0.5vh" }}>
           <span className="font-bold">Sort by:</span>
         </p>
 
         {/* Sorting Options */}
-        <div className="bg-gray-200 p-1 rounded" style={{ marginTop: "-1vh" }}>
+        <div className="p-1 rounded" style={{ marginTop: "-1vh" }}>
           <div className="inline-block h-7 w-11 mr-1.5">
             <select className="p-2 border rounded text-sm text-gray-900 bg-gray-200 block w-full">
               <option value="">Rating</option>
