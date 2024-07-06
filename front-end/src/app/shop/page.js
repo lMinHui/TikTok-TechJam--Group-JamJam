@@ -135,20 +135,24 @@ export default function Home() {
         </p>
 
         {/* Product Placeholders */}
-        <div className="flex mb-8" style={{ marginTop: "-1vh" }}>
+        <div className="flex mb-8 h-40" style={{ marginTop: "-1vh" }}>
           {/* First Product */}
-          <div className="bg-gray-200 w-2/5 mr-4 h-40"></div>
+          <div className="bg-gray-200 w-2/5 mr-4 h-full"></div>
 
           {/* Second Product */}
-          <div className="flex flex-col w-3/5">
-            {/* Top Product */}
-            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
-            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
-            <div className="bg-gray-200 mb-4 min-h-4/7"></div>
+          <div className="flex flex-col w-3/5 h-full gap-y-4">
+            <div className="flex w-full h-1/2 gap-x-4">
+              {/* Top Product */}
+              <div className="bg-gray-200 w-full h-full"></div>
+              <div className="bg-gray-200 w-full h-full"></div>
+              <div className="bg-gray-200 w-full h-full"></div>
+            </div>
+            <div className="flex w-full h-1/2 gap-x-4">
+              {/* Bottom Product */}
+              <div className="bg-gray-200 w-full h-full"></div>
+              <div className="bg-gray-200 w-full h-full"></div>
+            </div>
 
-            {/* Bottom Product */}
-            <div className="bg-gray-200 min-h-3/7"></div>
-            <div className="bg-gray-200 min-h-3/7"></div>
           </div>
         </div>
 
