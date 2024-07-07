@@ -387,30 +387,30 @@ export default function Home() {
           {products.length > 0 ? (
             <>
               <div className="flex">
-                <div className="w-1/2 h-[450px]">
+                <div className="w-2/5 h-[225px]">
                   <img
                     src={firstProduct.src}
                     alt={firstProduct.product_name}
                     className="h-full w-full object-cover rounded-xl"
                   />
                 </div>
-                <div className="w-1/2 flex flex-col space-y-4">
+                <div className="w-3/5 h-1/2 flex flex-col space-y-2">
                   <div className="flex space-x-4">
-                    <div className="w-1/3 h-[150px]">
+                    <div className="w-3/5 h-1/2">
                       <img
                         src={remainingProducts[0].src}
                         alt={remainingProducts[0].product_name}
                         className="h-full w-full object-cover rounded-xl"
                       />
                     </div>
-                    <div className="w-1/3 h-[150px]">
+                    <div className="w-1/3 h-1/2">
                       <img
                         src={remainingProducts[1].src}
                         alt={remainingProducts[1].product_name}
                         className="h-full w-full object-cover rounded-xl"
                       />
                     </div>
-                    <div className="w-1/3 h-[150px]">
+                    <div className="w-1/3 h-1/2">
                       <img
                         src={remainingProducts[2].src}
                         alt={remainingProducts[2].product_name}
@@ -419,14 +419,14 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex space-x-4">
-                    <div className="w-1/2 h-[200px]">
+                    <div className="w-1/2 h-1/2">
                       <img
                         src={remainingProducts[3].src}
                         alt={remainingProducts[3].product_name}
                         className="h-full w-full object-cover rounded-xl"
                       />
                     </div>
-                    <div className="w-1/2 h-[200px]">
+                    <div className="w-1/2 h-1/2">
                       <img
                         src={remainingProducts[4].src}
                         alt={remainingProducts[4].product_name}
@@ -483,7 +483,12 @@ export default function Home() {
         {/* Product Grid */}
         <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
-            <FeaturedProdCard itemId={product.product_id} product_name={product.product_name} price={product.price} src={product.src} ></FeaturedProdCard>
+            <FeaturedProdCard
+              itemId={product.product_id}
+              product_name={product.product_name}
+              price={product.price}
+              src={product.src}
+            ></FeaturedProdCard>
           ))}
         </div>
       </main>
