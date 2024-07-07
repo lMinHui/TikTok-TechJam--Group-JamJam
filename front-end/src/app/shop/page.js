@@ -256,17 +256,23 @@ export default function Home() {
     }
   }, [query]);
 
-  // To fetch product data from MongoDB
+  // To fetch product data
   useEffect(() => {
-    const fetchProducts = () => {
-      if (prodCategory && productDataByCat.hasOwnProperty(prodCategory)) {
-        setProducts(productDataByCat[prodCategory]);
-      } else {
-        setProducts([]);
-      }
+    const getProductsByCategories = (categories) => {
+      const result = [];
+      categories.forEach((category) => {
+        if (productDataByCat.hasOwnProperty(category)) {
+          result.push(...productDataByCat[category]);
+        }
+      });
+      return result;
     };
 
-    fetchProducts();
+    if (prodCategory) {
+      const formattedCategory = prodCategory.toLowerCase().replace(/\s/g, "_");
+      const products = getProductsByCategories([formattedCategory]);
+      setProducts(products);
+    }
   }, [prodCategory]);
 
   // Placeholder images
