@@ -285,6 +285,35 @@ export default function Home() {
     "/products/1_product.webp",
   ];
 
+  const generateTopPlaceholders = () => {
+    const placeholders = [];
+    const productCount =
+      products.length > 0 ? products.length : placeholderImages.length;
+
+    for (let i = 0; i < 6; i++) {
+      const index = i % productCount; // Loop through products or placeholders
+      placeholders.push(
+        <div key={i} className="bg-gray-200 w-full h-full relative">
+          <Image
+            src={
+              products.length > 0
+                ? products[index].src
+                : placeholderImages[i % placeholderImages.length]
+            }
+            alt={
+              products.length > 0
+                ? products[index].product_name
+                : `Placeholder ${i + 1}`
+            }
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      );
+    }
+    return placeholders;
+  };
+
   return (
     <div className="flex min-h-screen flex-col bg-white">
       {/* header section starts here*/}
@@ -381,7 +410,7 @@ export default function Home() {
         {/* Product Placeholders */}
         <div className="flex mb-8 h-40" style={{ marginTop: "-1vh" }}>
           {/* First Product */}
-          <div className="bg-gray-200 w-2/5 mr-2 h-full">
+          <div className="bg-gray-200 w-2/5 mr-2 h-full relative">
             <Image
               src={products.length > 0 ? products[0].src : placeholderImages[0]}
               alt={
@@ -396,35 +425,12 @@ export default function Home() {
           <div className="flex flex-col w-3/5 h-full gap-y-2">
             <div className="flex w-full h-1/2 gap-x-2">
               {/* Top Products */}
-              {products.slice(1, 4).map((product, index) => (
-                <div
-                  key={product.product_id}
-                  className="bg-gray-200 w-full h-full"
-                >
-                  <Image
-                    src={product.src}
-                    alt={product.product_name}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              ))}
+              {generateTopPlaceholders()}
             </div>
             <div className="flex w-full h-1/2 gap-x-2">
               {/* Bottom Products */}
-              {products.slice(4, 6).map((product, index) => (
-                <div
-                  key={product.product_id}
-                  className="bg-gray-200 w-full h-full"
-                >
-                  <Image
-                    src={product.src}
-                    alt={product.product_name}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-              ))}
+              {generatePlaceholders().slice(4, 6)}{" "}
+              {/* Adjust slicing based on layout */}
             </div>
           </div>
         </div>
