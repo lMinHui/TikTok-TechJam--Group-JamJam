@@ -285,34 +285,32 @@ export default function Home() {
     "/products/1_product.webp",
   ];
 
-  const generateTopPlaceholders = () => {
+  function generateBottomPlaceholders(products) {
     const placeholders = [];
-    const productCount =
-      products.length > 0 ? products.length : placeholderImages.length;
+    const numToGenerate = 6; // Number of placeholders you want to generate
 
-    for (let i = 0; i < 6; i++) {
-      const index = i % productCount; // Loop through products or placeholders
+    // If there are products, start from the second product
+    const startIdx = products.length > 1 ? 1 : 0;
+
+    // Fill placeholders array with images
+    for (let i = startIdx; i < numToGenerate; i++) {
+      const productIdx = i < products.length ? i : products.length - 1;
+      const product = products[productIdx];
+
       placeholders.push(
-        <div key={i} className="bg-gray-200 w-full h-full relative">
+        <div key={i} className="bg-gray-200 w-1/3 h-full relative">
           <Image
-            src={
-              products.length > 0
-                ? products[index].src
-                : placeholderImages[i % placeholderImages.length]
-            }
-            alt={
-              products.length > 0
-                ? products[index].product_name
-                : `Placeholder ${i + 1}`
-            }
+            src={product.src}
+            alt={product.product_name}
             layout="fill"
             objectFit="cover"
           />
         </div>
       );
     }
+
     return placeholders;
-  };
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -429,8 +427,7 @@ export default function Home() {
             </div>
             <div className="flex w-full h-1/2 gap-x-2">
               {/* Bottom Products */}
-              {/* Adjust slicing based on layout */}
-              {generateTopPlaceholders().slice(4, 6)}
+              {generateBottomPlaceholders(products)}
             </div>
           </div>
         </div>
