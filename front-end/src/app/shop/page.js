@@ -286,12 +286,6 @@ export default function Home() {
       const product = products[i] || lastProduct;
       remainingProducts.push(product);
     }
-
-    const ProductDisplay = ({ products }) => {
-      if (!products || products.length === 0) {
-        return null;
-      }
-    };
   };
 
   return (
@@ -401,10 +395,10 @@ export default function Home() {
 
           {/* Remaining Products */}
           <div className="flex flex-col w-3/5 h-full gap-y-2">
-            <div className="flex w-full h-1/2 gap-x-2">
+            <div className="flex w-full h-full gap-y-2 flex-wrap">
               {/* Render remaining products */}
               {remainingProducts.map((product, index) => (
-                <div key={index} className="bg-gray-200 w-full h-full relative">
+                <div key={index} className="bg-gray-200 w-1/3 h-1/2 relative">
                   <Image
                     src={product.src}
                     alt={product.product_name}
