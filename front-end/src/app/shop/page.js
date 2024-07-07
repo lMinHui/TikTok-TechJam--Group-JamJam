@@ -429,8 +429,8 @@ export default function Home() {
             </div>
             <div className="flex w-full h-1/2 gap-x-2">
               {/* Bottom Products */}
-              {generatePlaceholders().slice(4, 6)}{" "}
               {/* Adjust slicing based on layout */}
+              {generateTopPlaceholders().slice(4, 6)}
             </div>
           </div>
         </div>
