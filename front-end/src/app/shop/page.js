@@ -271,12 +271,12 @@ export default function Home() {
 
   // Placeholder images
   const placeholderImages = [
-    "/products/placeholder1.jpg",
-    "/products/placeholder2.jpg",
-    "/products/placeholder3.jpg",
-    "/products/placeholder4.jpg",
-    "/products/placeholder5.jpg",
-    "/products/placeholder6.jpg",
+    "/products/1_product.webp",
+    "/products/1_product.webp",
+    "/products/1_product.webp",
+    "/products/1_product.webp",
+    "/products/1_product.webp",
+    "/products/1_product.webp",
   ];
 
   return (
