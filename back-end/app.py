@@ -58,6 +58,16 @@ def fetch_data():
 
         videos = collection.find({})
 
+        ####### code for fetching data from Products Database #######
+        collection_product = db.get_collection('Products')  
+
+        search_query = request.args.get('query')
+        if search_query:
+            # Find products that match the search query
+            products = collection_product.find({"name": {"$regex": search_query, "$options": "i"}})
+        else:
+            products = collection_product.find({})
+
         # Convert cursor to list and then to JSON
         videoJson = json_util.dumps(list(videos))
 
