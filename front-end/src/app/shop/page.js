@@ -259,15 +259,25 @@ export default function Home() {
   // To fetch product data from MongoDB
   useEffect(() => {
     const fetchProducts = () => {
-      if (prodCategory) {
-        const categoryKey = prodCategory.toLowerCase().replace(/\s+/g, "_");
-        const categoryProducts = productDataByCat[categoryKey] || [];
-        setProducts(categoryProducts);
+      if (prodCategory && productDataByCat.hasOwnProperty(prodCategory)) {
+        setProducts(productDataByCat[prodCategory]);
+      } else {
+        setProducts([]);
       }
     };
 
     fetchProducts();
   }, [prodCategory]);
+
+  // Placeholder images
+  const placeholderImages = [
+    "/products/placeholder1.jpg",
+    "/products/placeholder2.jpg",
+    "/products/placeholder3.jpg",
+    "/products/placeholder4.jpg",
+    "/products/placeholder5.jpg",
+    "/products/placeholder6.jpg",
+  ];
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -365,20 +375,50 @@ export default function Home() {
         {/* Product Placeholders */}
         <div className="flex mb-8 h-40" style={{ marginTop: "-1vh" }}>
           {/* First Product */}
-          <div className="bg-gray-200 w-2/5 mr-2 h-full"></div>
+          <div className="bg-gray-200 w-2/5 mr-2 h-full">
+            <Image
+              src={products.length > 0 ? products[0].src : placeholderImages[0]}
+              alt={
+                products.length > 0 ? products[0].product_name : "Placeholder"
+              }
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
 
           {/* Second Product */}
           <div className="flex flex-col w-3/5 h-full gap-y-2">
             <div className="flex w-full h-1/2 gap-x-2">
-              {/* Top Product */}
-              <div className="bg-gray-200 w-full h-full"></div>
-              <div className="bg-gray-200 w-full h-full"></div>
-              <div className="bg-gray-200 w-full h-full"></div>
+              {/* Top Products */}
+              {products.slice(1, 4).map((product, index) => (
+                <div
+                  key={product.product_id}
+                  className="bg-gray-200 w-full h-full"
+                >
+                  <Image
+                    src={product.src}
+                    alt={product.product_name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              ))}
             </div>
             <div className="flex w-full h-1/2 gap-x-2">
-              {/* Bottom Product */}
-              <div className="bg-gray-200 w-full h-full"></div>
-              <div className="bg-gray-200 w-full h-full"></div>
+              {/* Bottom Products */}
+              {products.slice(4, 6).map((product, index) => (
+                <div
+                  key={product.product_id}
+                  className="bg-gray-200 w-full h-full"
+                >
+                  <Image
+                    src={product.src}
+                    alt={product.product_name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -422,7 +462,7 @@ export default function Home() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-2 gap-4" style={{ marginTop: "-1vh" }}>
+        <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
             <FeaturedProdCard key={product.product_id} product={product} />
           ))}
