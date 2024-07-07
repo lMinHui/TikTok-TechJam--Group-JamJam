@@ -21,6 +21,8 @@ export default function Home() {
   // Set active bar for tab in the navigation
   const [activeTab, setActiveTab] = useState("Shop");
 
+  const [products, setProducts] = useState([]);
+
   // To input the search input on page load
   useEffect(() => {
     if (query) {
@@ -39,6 +41,22 @@ export default function Home() {
       document.getElementById("searchInput").value = formattedQuery;
       setProdCategory(formattedQuery);
     }
+  }, [query]);
+
+  // To fetch product data from MongoDB
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`/api/products?query=${query}`); // Need to change
+
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
   }, [query]);
 
   return (
@@ -193,10 +211,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Product Grid */}
+         {/* Product Grid */}
         <div className="grid grid-cols-2 gap-4" style={{ marginTop: "-1vh" }}>
-          {[1, 2, 3, 4, 5, 6].map((itemId) => (
-            <FeaturedProdCard key={itemId} itemId={itemId} />
+          {products.map((product) => (
+            <FeaturedProdCard key={product._id} product={product} />
           ))}
         </div>
       </main>
