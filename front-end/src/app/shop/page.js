@@ -383,54 +383,54 @@ export default function Home() {
         </p>
 
         {/* Product Placeholders */}
-        <div className="w-full h-full px-4 py-6">
+        <div className="w-full h-full px-2 py-3">
           {products.length > 0 ? (
             <>
               <div className="flex">
-                <div className="w-2/5 h-[225px]">
+                <div className="w-2/5 h-full">
                   <img
                     src={firstProduct.src}
                     alt={firstProduct.product_name}
-                    className="h-full w-full object-cover rounded-xl"
+                    className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="w-3/5 h-1/2 flex flex-col space-y-2">
+                <div className="w-3/5 h-1/2 flex flex-col space-y-1">
                   <div className="flex space-x-4">
                     <div className="w-3/5 h-1/2">
                       <img
                         src={remainingProducts[0].src}
                         alt={remainingProducts[0].product_name}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className="w-1/3 h-1/2">
+                    <div className="w-3/5 h-1/2">
                       <img
                         src={remainingProducts[1].src}
                         alt={remainingProducts[1].product_name}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                       />
                     </div>
-                    <div className="w-1/3 h-1/2">
+                    <div className="w-3/5 h-1/2">
                       <img
                         src={remainingProducts[2].src}
                         alt={remainingProducts[2].product_name}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-2">
                     <div className="w-1/2 h-1/2">
                       <img
                         src={remainingProducts[3].src}
                         alt={remainingProducts[3].product_name}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                     <div className="w-1/2 h-1/2">
                       <img
                         src={remainingProducts[4].src}
                         alt={remainingProducts[4].product_name}
-                        className="h-full w-full object-cover rounded-xl"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                   </div>
