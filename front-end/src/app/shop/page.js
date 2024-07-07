@@ -386,50 +386,54 @@ export default function Home() {
         <div className="w-full h-full px-4 py-6">
           {products.length > 0 ? (
             <>
-              <div className="h-[450px]">
-                <img
-                  src={firstProduct.src}
-                  alt={firstProduct.product_name}
-                  className="h-full w-full object-cover rounded-xl"
-                />
-              </div>
-              <div className="flex justify-between w-full mt-6 space-x-4">
-                <div className="w-full h-[200px]">
+              <div className="flex">
+                <div className="w-1/2 h-[450px]">
                   <img
-                    src={remainingProducts[0].src}
-                    alt={remainingProducts[0].product_name}
+                    src={firstProduct.src}
+                    alt={firstProduct.product_name}
                     className="h-full w-full object-cover rounded-xl"
                   />
                 </div>
-                <div className="w-full h-[200px]">
-                  <img
-                    src={remainingProducts[1].src}
-                    alt={remainingProducts[1].product_name}
-                    className="h-full w-full object-cover rounded-xl"
-                  />
-                </div>
-                <div className="w-full h-[200px]">
-                  <img
-                    src={remainingProducts[2].src}
-                    alt={remainingProducts[2].product_name}
-                    className="h-full w-full object-cover rounded-xl"
-                  />
-                </div>
-              </div>
-              <div className="flex justify-between w-full mt-6 space-x-4">
-                <div className="w-full h-[200px]">
-                  <img
-                    src={remainingProducts[3].src}
-                    alt={remainingProducts[3].product_name}
-                    className="h-full w-full object-cover rounded-xl"
-                  />
-                </div>
-                <div className="w-full h-[200px]">
-                  <img
-                    src={remainingProducts[4].src}
-                    alt={remainingProducts[4].product_name}
-                    className="h-full w-full object-cover rounded-xl"
-                  />
+                <div className="w-1/2 flex flex-col space-y-4">
+                  <div className="flex space-x-4">
+                    <div className="w-1/3 h-[150px]">
+                      <img
+                        src={remainingProducts[0].src}
+                        alt={remainingProducts[0].product_name}
+                        className="h-full w-full object-cover rounded-xl"
+                      />
+                    </div>
+                    <div className="w-1/3 h-[150px]">
+                      <img
+                        src={remainingProducts[1].src}
+                        alt={remainingProducts[1].product_name}
+                        className="h-full w-full object-cover rounded-xl"
+                      />
+                    </div>
+                    <div className="w-1/3 h-[150px]">
+                      <img
+                        src={remainingProducts[2].src}
+                        alt={remainingProducts[2].product_name}
+                        className="h-full w-full object-cover rounded-xl"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex space-x-4">
+                    <div className="w-1/2 h-[200px]">
+                      <img
+                        src={remainingProducts[3].src}
+                        alt={remainingProducts[3].product_name}
+                        className="h-full w-full object-cover rounded-xl"
+                      />
+                    </div>
+                    <div className="w-1/2 h-[200px]">
+                      <img
+                        src={remainingProducts[4].src}
+                        alt={remainingProducts[4].product_name}
+                        className="h-full w-full object-cover rounded-xl"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </>
