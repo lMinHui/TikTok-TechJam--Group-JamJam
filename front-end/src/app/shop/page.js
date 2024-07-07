@@ -275,42 +275,23 @@ export default function Home() {
     }
   }, [prodCategory]);
 
-  // Placeholder images
-  const placeholderImages = [
-    "/products/1_product.webp",
-    "/products/1_product.webp",
-    "/products/1_product.webp",
-    "/products/1_product.webp",
-    "/products/1_product.webp",
-    "/products/1_product.webp",
-  ];
-
-  function generateBottomPlaceholders(products) {
-    const placeholders = [];
-    const numToGenerate = 6; // Number of placeholders you want to generate
-
-    // If there are products, start from the second product
-    const startIdx = products.length > 1 ? 1 : 0;
-
-    // Fill placeholders array with images
-    for (let i = startIdx; i < numToGenerate; i++) {
-      const productIdx = i < products.length ? i : products.length - 1;
-      const product = products[productIdx];
-
-      placeholders.push(
-        <div key={i} className="bg-gray-200 w-1/3 h-full relative">
-          <Image
-            src={product.src}
-            alt={product.product_name}
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      );
-    }
-
-    return placeholders;
+const ProductDisplay = ({ products }) => {
+  if (!products || products.length === 0) {
+    return null; 
   }
+  const firstProduct = products[0];
+  const lastProduct = products[products.length - 1];
+  const remainingProducts = [];
+  for (let i = 1; i < 6; i++) {
+    const product = products[i] || lastProduct;
+    remainingProducts.push(product);
+  }
+
+  const ProductDisplay = ({ products }) => {
+    if (!products || products.length === 0) {
+      return null; 
+    }
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -410,24 +391,27 @@ export default function Home() {
           {/* First Product */}
           <div className="bg-gray-200 w-2/5 mr-2 h-full relative">
             <Image
-              src={products.length > 0 ? products[0].src : placeholderImages[0]}
-              alt={
-                products.length > 0 ? products[0].product_name : "Placeholder"
-              }
+              src={firstProduct.src}
+              alt={firstProduct.product_name}
               layout="fill"
               objectFit="cover"
             />
           </div>
 
-          {/* Second Product */}
+          {/* Remaining Products */}
           <div className="flex flex-col w-3/5 h-full gap-y-2">
             <div className="flex w-full h-1/2 gap-x-2">
-              {/* Top Products */}
-              {generateTopPlaceholders()}
-            </div>
-            <div className="flex w-full h-1/2 gap-x-2">
-              {/* Bottom Products */}
-              {generateBottomPlaceholders(products)}
+              {/* Render remaining products */}
+              {remainingProducts.map((product, index) => (
+                <div key={index} className="bg-gray-200 w-full h-full relative">
+                  <Image
+                    src={product.src}
+                    alt={product.product_name}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
