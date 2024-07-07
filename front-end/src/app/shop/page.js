@@ -22,6 +22,9 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState("Shop");
 
   const [products, setProducts] = useState([]);
+  const [firstProduct, setFirstProduct] = useState(null);
+  const [remainingProducts, setRemainingProducts] = useState([]);
+  const [lastProduct, setLastProduct] = useState(null);
 
   // product data use for demo
   const productDataByCat = {
@@ -272,21 +275,19 @@ export default function Home() {
       const formattedCategory = prodCategory.toLowerCase().replace(/\s/g, "_");
       const products = getProductsByCategories([formattedCategory]);
       setProducts(products);
+
+      if (products.length > 0) {
+        setFirstProduct(products[0]);
+        setLastProduct(products[products.length - 1]);
+        const remaining = [];
+        for (let i = 1; i < 6; i++) {
+          const product = products[i] || products[products.length - 1];
+          remaining.push(product);
+        }
+        setRemainingProducts(remaining);
+      }
     }
   }, [prodCategory]);
-
-  const ProductDisplay = ({ products }) => {
-    if (!products || products.length === 0) {
-      return null;
-    }
-    const firstProduct = products[0];
-    const lastProduct = products[products.length - 1];
-    const remainingProducts = [];
-    for (let i = 1; i < 6; i++) {
-      const product = products[i] || lastProduct;
-      remainingProducts.push(product);
-    }
-  };
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
@@ -382,33 +383,59 @@ export default function Home() {
         </p>
 
         {/* Product Placeholders */}
-        <div className="flex mb-8 h-40" style={{ marginTop: "-1vh" }}>
-          {/* First Product */}
-          <div className="bg-gray-200 w-2/5 mr-2 h-full relative">
-            <Image
-              src={firstProduct.src}
-              alt={firstProduct.product_name}
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-
-          {/* Remaining Products */}
-          <div className="flex flex-col w-3/5 h-full gap-y-2">
-            <div className="flex w-full h-full gap-y-2 flex-wrap">
-              {/* Render remaining products */}
-              {remainingProducts.map((product, index) => (
-                <div key={index} className="bg-gray-200 w-1/3 h-1/2 relative">
-                  <Image
-                    src={product.src}
-                    alt={product.product_name}
-                    layout="fill"
-                    objectFit="cover"
+        <div className="w-full h-full px-4 py-6">
+          {products.length > 0 ? (
+            <>
+              <div className="h-[450px]">
+                <img
+                  src={firstProduct.src}
+                  alt={firstProduct.product_name}
+                  className="h-full w-full object-cover rounded-xl"
+                />
+              </div>
+              <div className="flex justify-between w-full mt-6 space-x-4">
+                <div className="w-full h-[200px]">
+                  <img
+                    src={remainingProducts[0].src}
+                    alt={remainingProducts[0].product_name}
+                    className="h-full w-full object-cover rounded-xl"
                   />
                 </div>
-              ))}
-            </div>
-          </div>
+                <div className="w-full h-[200px]">
+                  <img
+                    src={remainingProducts[1].src}
+                    alt={remainingProducts[1].product_name}
+                    className="h-full w-full object-cover rounded-xl"
+                  />
+                </div>
+                <div className="w-full h-[200px]">
+                  <img
+                    src={remainingProducts[2].src}
+                    alt={remainingProducts[2].product_name}
+                    className="h-full w-full object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-between w-full mt-6 space-x-4">
+                <div className="w-full h-[200px]">
+                  <img
+                    src={remainingProducts[3].src}
+                    alt={remainingProducts[3].product_name}
+                    className="h-full w-full object-cover rounded-xl"
+                  />
+                </div>
+                <div className="w-full h-[200px]">
+                  <img
+                    src={remainingProducts[4].src}
+                    alt={remainingProducts[4].product_name}
+                    className="h-full w-full object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+            </>
+          ) : (
+            <p>No products available.</p>
+          )}
         </div>
 
         {/* Sort Title*/}
