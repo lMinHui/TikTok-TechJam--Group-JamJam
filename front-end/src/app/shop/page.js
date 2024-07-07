@@ -483,7 +483,7 @@ export default function Home() {
         {/* Product Grid */}
         <div className="grid grid-cols-2 gap-4">
           {products.map((product) => (
-            <FeaturedProdCard key={product.product_id} product={product} />
+            <FeaturedProdCard itemId={product.product_id} product_name={product.product_name} price={product.price} src={product.src} ></FeaturedProdCard>
           ))}
         </div>
       </main>
