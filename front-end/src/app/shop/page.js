@@ -275,22 +275,23 @@ export default function Home() {
     }
   }, [prodCategory]);
 
-const ProductDisplay = ({ products }) => {
-  if (!products || products.length === 0) {
-    return null; 
-  }
-  const firstProduct = products[0];
-  const lastProduct = products[products.length - 1];
-  const remainingProducts = [];
-  for (let i = 1; i < 6; i++) {
-    const product = products[i] || lastProduct;
-    remainingProducts.push(product);
-  }
-
   const ProductDisplay = ({ products }) => {
     if (!products || products.length === 0) {
-      return null; 
+      return null;
     }
+    const firstProduct = products[0];
+    const lastProduct = products[products.length - 1];
+    const remainingProducts = [];
+    for (let i = 1; i < 6; i++) {
+      const product = products[i] || lastProduct;
+      remainingProducts.push(product);
+    }
+
+    const ProductDisplay = ({ products }) => {
+      if (!products || products.length === 0) {
+        return null;
+      }
+    };
   };
 
   return (
