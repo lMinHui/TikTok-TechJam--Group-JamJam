@@ -3,8 +3,10 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from bson import json_util
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def hello():
@@ -48,6 +50,38 @@ def list_collections(database_name):
     except Exception as e:
         return jsonify({"error": str(e)})
 
+def analyze_document(document, field_types):
+    for key, value in document.items():
+        if isinstance(value, dict):
+            analyze_document(value, field_types)
+        elif isinstance(value, list):
+            for item in value:
+                if isinstance(item, dict):
+                    analyze_document(item, field_types)
+        else:
+            current_type = type(value).__name__
+            if key not in field_types:
+                field_types[key] = [current_type]
+            else:
+                if current_type not in field_types[key]:
+                    field_types[key].append(current_type)
+
+@app.route('/field-types', methods=['GET'])
+def get_field_types():
+    client = MongoClient(uri)
+    db = client.get_database('tiktokHack')  
+    collection = db.get_collection('Products')  
+
+    sample_documents = collection.find({})
+
+    field_types = {}
+
+    for document in sample_documents:
+        analyze_document(document, field_types)
+
+    json_output = json_util.dumps(field_types)
+
+    return json_output
 
 @app.route('/fetch-data', methods=['GET'])
 def fetch_data():
