@@ -33,7 +33,7 @@ We first add a new ‘Shop’ button that is located with the regular buttons on
 We want to avoid compromising the core experience of TikTok, thus this button should follow the main simplistic aesthetic of current buttons. Yet, we also want to make it standout to notify users of a new opportunity to interact with TikTok. A mild halo effect is added to the button to achieve this intent. This halo will be activated when there are products identified in the video. 
 
 ### Core feature/functionality:
-When pressed, the ‘Shop’ button pulls up a sidebar containing cards of all **products identified** – both those **inputted by the creator** (for the affiliate programme) and those **identified automatically**. When pressed, the cards bring users to the TikTok Shop. We effectively bridge curious users to the TikTok Shop via appealing to their interests. 
+When pressed, the ‘Shop’ button pulls up a sidebar containing cards of all **products identified** – both those **inputted by the creator** (for the affiliate programme) and those **identified automatically**. When pressed, the cards bring users to the TikTok Shop. We effectively bridge curious users to the TikTok Shop via appealing uniquely to their interests. 
 
 ## Value Proposition
 Our solution provides value to 3 main identified stakeholders:
@@ -57,3 +57,6 @@ We did not implement the Vision Model and Visual Search Model, which are 2 large
 ## Details on running our app
 * To run the front-end: `cd front-end` then run `npm run dev` (or `npm run build` then `npm run dev`)
 * To run the back-end: `cd back-end` then run `flask run`
+
+
+Credits: For illustration purposes, product images sourced from various brands were used in our app.
