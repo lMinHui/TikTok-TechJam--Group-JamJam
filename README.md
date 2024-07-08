@@ -48,7 +48,7 @@ We need to address the problem of extracting possible products existing in a vid
 ## Implementing an MVP 
 Our main focus for the MVP is to demonstrate a mock user's experience flow of browsing the For You page and encountering the new ‘Shop’ button which ultimately leads the user to TikTok Shop. Considering the short time span allocated for this project and rapid prototyping, our group decided to stick to a simple web application to simulate the enhanced TikTok user interface and user flow. 
 The tech stack we have used:
-* Frontend: React.js and Next.js (styled with Tailwind css)
+* Frontend: React and Next.js (styled with Tailwind css)
 * Backend: MongoDB
 
 We did not implement the Vision Model and Visual Search Model, which are 2 large areas that can be further studied and worked upon given more time. 
