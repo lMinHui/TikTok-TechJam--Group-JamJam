@@ -46,16 +46,15 @@ We need to address the problem of extracting possible products existing in a vid
 <img width="842" alt="System_flow" src="https://github.com/lMinHui/TikTok-TechJam--Group-JamJam/assets/123468516/a55b797f-5c8d-47df-8415-40bd92fa85f0">
 
 ## Implementing an MVP 
-Our main focus for the MVP is to demonstrate a mock user's experience flow of browsing the For You page and encountering the new ‘Shop’ button which ultimately leads the user to TikTok Shop. Considering the short time span allocated for this project and rapid prototyping, our group decided to stick to a simple web application to simulate the enhanced TikTok user interface and user flow. 
+Our main focus for the MVP is to demonstrate a mock user's experience flow of browsing the For You page and encountering the new ‘Shop’ button which ultimately leads the user to TikTok Shop. Considering the short time span allocated for this project and rapid prototyping, our group decided to stick to a web application to simulate the enhanced TikTok user interface and user flow. 
 The tech stack we have used:
-* Frontend: React and Next.js (styled with Tailwind css)
+* Frontend: React and Next.js (styled with Tailwind CSS)
 * Backend: MongoDB
 
-We did not implement the Vision Model and Visual Search Model, which are 2 large areas that can be further studied and worked upon given more time. 
+Accompanying our app is a product identification visual model, which can detect items featured in TikTok videos which are available in TikTok Shop. This uses OpenCV for image and video processing tasks, and ORB for feature detection. This model was evaluated on accuracy and can be found under the product-identification folder.
 
 ## Details on running our app
 * To run the front-end: `cd front-end` then run `npm run dev` (or `npm run build` then `npm run dev`)
 * To run the back-end: `cd back-end` then run `flask run`
 
-
-Credits: For illustration purposes, product images sourced from various brands were used in our app.
+Credits: For illustration purposes, videos sourced from TikTok and product images sourced from various brands were used in our app.
