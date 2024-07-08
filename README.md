@@ -3,11 +3,10 @@
 Our group is tackling **Track 3** with the problem statement on **Enhancing Tailored Discovery on TikTok Shop**.
 
 ## Premise:
-* TikTok For You page, a powerful recommender:
-
+* <ins>TikTok For You page, a powerful recommender</ins>:
 Currently, TikTok For You page effectively curates content catered to each users’ interests and preferences ahead of competitors. The algorithm is particularly effective in correctly recommending based on factors like interest areas, emerging and mainstream trends, style, and location. 
 
-* TikTok Shop and Creator Landscape:
+* <ins>TikTok Shop and Creator Landscape</ins>:
   
 Building upon the well established trend of haul and product recommendation videos, [TikTok affiliate commissions programme](https://seller-sg.TikTok.com/university/essay?knowledge_id=7999945010038530&default_language=en&identity=1) incentivises creators to promote products from TikTok Shop – thereby driving traffic to the TikTok Shop.
 
