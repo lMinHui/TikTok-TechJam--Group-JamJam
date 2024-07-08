@@ -36,9 +36,9 @@ When pressed, the ‘Shop’ button pulls up a sidebar containing cards of all *
 
 ## Value Proposition
 Our solution provides value to 3 main identified stakeholders:
-* *Users*: Easily discover new intriguing products and conveniently learn more about these products or even purchase them solely on the TikTok platform. All past viewings and purchases help to further curate recommendations further enriching discovery journey
-* *Creators/Sellers*: Enjoy more traffic to their listings leading to more purchases
-* *TikTok*: Further cement expansion from a short video content platform to the e-commerce field via prevention of customer defection. 
+* <ins>Users</ins>: Easily discover new intriguing products and conveniently learn more about these products or even purchase them solely on the TikTok platform. All past viewings and purchases help to further curate recommendations further enriching discovery journey
+* <ins> *Creators/Sellers </ins>: Enjoy more traffic to their listings leading to more purchases
+* <ins>TikTok</ins>: Further cement expansion from a short video content platform to the e-commerce field via prevention of customer defection. 
 
 ## Technical Specifications
 How might this solution be implemented?
