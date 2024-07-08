@@ -3,11 +3,10 @@
 Our group is tackling **Track 3** with the problem statement on **Enhancing Tailored Discovery on TikTok Shop**.
 
 ## Premise:
-* TikTok For You page, a powerful recommender:
-
+* <ins>TikTok For You page, a powerful recommender</ins>:
 Currently, TikTok For You page effectively curates content catered to each users’ interests and preferences ahead of competitors. The algorithm is particularly effective in correctly recommending based on factors like interest areas, emerging and mainstream trends, style, and location. 
 
-* TikTok Shop and Creator Landscape:
+* <ins>TikTok Shop and Creator Landscape</ins>:
   
 Building upon the well established trend of haul and product recommendation videos, [TikTok affiliate commissions programme](https://seller-sg.TikTok.com/university/essay?knowledge_id=7999945010038530&default_language=en&identity=1) incentivises creators to promote products from TikTok Shop – thereby driving traffic to the TikTok Shop.
 
@@ -37,9 +36,9 @@ When pressed, the ‘Shop’ button pulls up a sidebar containing cards of all *
 
 ## Value Proposition
 Our solution provides value to 3 main identified stakeholders:
-* *Users*: Easily discover new intriguing products and conveniently learn more about these products or even purchase them solely on the TikTok platform. All past viewings and purchases help to further curate recommendations further enriching discovery journey
-* *Creators/Sellers*: Enjoy more traffic to their listings leading to more purchases
-* *TikTok*: Further cement expansion from a short video content platform to the e-commerce field via prevention of customer defection. 
+* <ins>Users</ins>: Easily discover new intriguing products and conveniently learn more about these products or even purchase them solely on the TikTok platform. All past viewings and purchases help to further curate recommendations further enriching discovery journey
+* <ins> *Creators/Sellers </ins>: Enjoy more traffic to their listings leading to more purchases
+* <ins>TikTok</ins>: Further cement expansion from a short video content platform to the e-commerce field via prevention of customer defection. 
 
 ## Technical Specifications
 How might this solution be implemented?
@@ -47,16 +46,15 @@ We need to address the problem of extracting possible products existing in a vid
 <img width="842" alt="System_flow" src="https://github.com/lMinHui/TikTok-TechJam--Group-JamJam/assets/123468516/a55b797f-5c8d-47df-8415-40bd92fa85f0">
 
 ## Implementing an MVP 
-Our main focus for the MVP is to demonstrate a mock user's experience flow of browsing the For You page and encountering the new ‘Shop’ button which ultimately leads the user to TikTok Shop. Considering the short time span allocated for this project and rapid prototyping, our group decided to stick to a simple web application to simulate the enhanced TikTok user interface and user flow. 
+Our main focus for the MVP is to demonstrate a mock user's experience flow of browsing the For You page and encountering the new ‘Shop’ button which ultimately leads the user to TikTok Shop. Considering the short time span allocated for this project and rapid prototyping, our group decided to stick to a web application to simulate the enhanced TikTok user interface and user flow. 
 The tech stack we have used:
-* Frontend: React.js and Next.js (styled with Tailwind css)
+* Frontend: React and Next.js (styled with Tailwind CSS)
 * Backend: MongoDB
 
-We did not implement the Vision Model and Visual Search Model, which are 2 large areas that can be further studied and worked upon given more time. 
+Accompanying our app is a product identification visual model, which can detect items featured in TikTok videos which are available in TikTok Shop. This uses OpenCV for image and video processing tasks, and ORB for feature detection. This model was evaluated on accuracy and can be found under the product-identification folder.
 
 ## Details on running our app
 * To run the front-end: `cd front-end` then run `npm run dev` (or `npm run build` then `npm run dev`)
 * To run the back-end: `cd back-end` then run `flask run`
 
-
-Credits: For illustration purposes, product images sourced from various brands were used in our app.
+Credits: For illustration purposes, videos sourced from TikTok and product images sourced from various brands were used in our app.
